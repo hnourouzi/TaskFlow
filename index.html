@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TaskFlow — Smart To-Do List</title>
+  <title>تسک‌فلو — فهرست کارهای هوشمند</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     @theme {
-      --font-sans: 'Inter', sans-serif;
+      --font-sans: 'Vazirmatn', sans-serif;
       --color-brand-50: #eef2ff;
       --color-brand-100: #e0e7ff;
       --color-brand-200: #c7d2fe;
@@ -23,7 +23,7 @@
     }
 
     * { box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; }
+    body { font-family: 'Vazirmatn', sans-serif; direction: rtl; }
 
     /* Scrollbar */
     ::-webkit-scrollbar { width: 6px; }
@@ -172,21 +172,21 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
           </svg>
         </div>
-        <h1 class="text-4xl font-extrabold text-white tracking-tight">TaskFlow</h1>
-        <p class="text-white/60 mt-2 text-sm font-medium">Organize your life, one task at a time</p>
+        <h1 class="text-4xl font-extrabold text-white tracking-tight">تسک‌فلو</h1>
+        <p class="text-white/60 mt-2 text-sm font-medium">سازمان‌دهی زندگی، یک کار در یک زمان</p>
       </div>
 
       <!-- Auth Card -->
       <div class="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl shadow-black/20 p-8 anim-scaleIn" style="animation-delay: 0.1s">
         <div class="text-center mb-6">
-          <h2 class="text-2xl font-bold text-gray-800" id="authHeading">Welcome</h2>
-          <p class="text-gray-400 mt-1 text-sm" id="authSubheading">Sign in or create an account to continue</p>
+          <h2 class="text-2xl font-bold text-gray-800" id="authHeading">خوش آمدید</h2>
+          <p class="text-gray-400 mt-1 text-sm" id="authSubheading">برای ادامه وارد شوید یا حساب جدیدی ایجاد کنید</p>
         </div>
 
         <form id="authForm" class="space-y-5" autocomplete="off">
           <!-- Username -->
           <div>
-            <label class="block text-sm font-semibold text-gray-600 mb-1.5">Username</label>
+            <label class="block text-sm font-semibold text-gray-600 mb-1.5">نام کاربری</label>
             <div class="relative">
               <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-gray-400">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
@@ -195,13 +195,13 @@
               </span>
               <input type="text" id="authUsername" required minlength="3"
                 class="w-full pl-11 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus-brand transition-all"
-                placeholder="Enter your username">
+                placeholder="نام کاربری خود را وارد کنید">
             </div>
           </div>
 
           <!-- Password -->
           <div>
-            <label class="block text-sm font-semibold text-gray-600 mb-1.5">Password</label>
+            <label class="block text-sm font-semibold text-gray-600 mb-1.5">رمز عبور</label>
             <div class="relative">
               <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-gray-400">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
@@ -210,7 +210,7 @@
               </span>
               <input type="password" id="authPassword" required minlength="4"
                 class="w-full pl-11 pr-12 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus-brand transition-all"
-                placeholder="Enter your password">
+                placeholder="رمز عبور خود را وارد کنید">
               <button type="button" id="togglePwdBtn" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-gray-400 hover:text-gray-600 transition-colors">
                 <svg class="w-5 h-5" id="eyeOpen" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
@@ -232,11 +232,11 @@
           <!-- Submit -->
           <button type="submit" id="authSubmitBtn"
             class="w-full py-3.5 bg-gradient-to-r from-brand-500 to-purple-600 text-white font-bold rounded-xl hover:from-brand-600 hover:to-purple-700 transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-brand-500/30 text-sm tracking-wide">
-            Sign In
+            ورود
           </button>
         </form>
 
-        <p class="text-center text-xs text-gray-400 mt-5">No account? Just enter new credentials to register.</p>
+        <p class="text-center text-xs text-gray-400 mt-5">حساب کاربری ندارید؟ برای ثبت‌نام ابتدا مشخصات جدید وارد کنید.</p>
       </div>
     </div>
   </section>
@@ -259,25 +259,25 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
             </svg>
           </div>
-          <span class="font-bold text-lg hidden sm:inline tracking-tight">TaskFlow</span>
+          <span class="font-bold text-lg hidden sm:inline tracking-tight">تسک‌فلو</span>
         </div>
       </div>
 
       <!-- Center: Search -->
       <div class="flex-1 max-w-lg mx-4 hidden sm:block">
         <div class="relative">
-          <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
           </svg>
-          <input type="text" id="searchInput" placeholder="Search tasks..."
-            class="w-full pl-10 pr-4 py-2.5 bg-gray-100 border border-transparent rounded-xl text-sm focus-brand transition-all placeholder:text-gray-400">
+          <input type="text" id="searchInput" placeholder="جستجو کارها..."
+            class="w-full pr-10 pl-4 py-2.5 bg-gray-100 border border-transparent rounded-xl text-sm focus-brand transition-all placeholder:text-gray-400">
         </div>
       </div>
 
       <!-- Right -->
       <div class="flex items-center gap-1.5">
         <!-- Theme toggle -->
-        <button id="themeToggleBtn" class="p-2 hover:bg-gray-100 rounded-xl transition-colors hidden" title="Toggle theme">
+        <button id="themeToggleBtn" class="p-2 hover:bg-gray-100 rounded-xl transition-colors hidden" title="تغییر دکوهای">
           <svg id="iconSun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
           </svg>
@@ -296,14 +296,14 @@
         </div>
 
         <!-- Logout -->
-        <button id="logoutBtn" class="p-2 hover:bg-amber-50 text-gray-400 hover:text-amber-600 rounded-xl transition-colors" title="Logout">
+        <button id="logoutBtn" class="p-2 hover:bg-amber-50 text-gray-400 hover:text-amber-600 rounded-xl transition-colors" title="خروج">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
           </svg>
         </button>
 
         <!-- Clear All -->
-        <button id="clearAllBtn" class="p-2 hover:bg-red-50 text-gray-400 hover:text-red-500 rounded-xl transition-colors" title="Clear all data">
+        <button id="clearAllBtn" class="p-2 hover:bg-red-50 text-gray-400 hover:text-red-500 rounded-xl transition-colors" title="حذف تمام داده‌ها">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
           </svg>
@@ -323,9 +323,9 @@
         <!-- Sidebar top -->
         <div class="p-4 border-b border-gray-100 flex-shrink-0">
           <div class="flex items-center justify-between mb-4">
-            <h2 class="font-bold text-base tracking-tight">Categories</h2>
+            <h2 class="font-bold text-base tracking-tight">دسته‌بندی‌ها</h2>
             <div class="flex items-center gap-1">
-              <button id="openAddCatBtn" class="p-1.5 bg-brand-500 text-black rounded-lg hover:bg-brand-600 transition-colors" title="Add category">
+              <button id="openAddCatBtn" class="p-1.5 bg-brand-500 text-black rounded-lg hover:bg-brand-600 transition-colors" title="افزودن دسته‌بندی">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
                 </svg>
@@ -341,7 +341,7 @@
           <!-- "All Tasks" pseudo-category -->
           <button id="allTasksBtn" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all hover:bg-gray-50 border border-transparent text-gray-600">
             <span class="text-lg">📋</span>
-            <span class="flex-1 text-left">All Tasks</span>
+            <span class="flex-1 text-right">تمام کارها</span>
             <span class="text-xs font-semibold bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full" id="allTasksCount">0</span>
           </button>
         </div>
@@ -355,13 +355,13 @@
         <div class="p-4 border-t border-gray-100 flex-shrink-0">
           <div class="bg-gradient-to-br from-brand-50 via-purple-50 to-pink-50 rounded-2xl p-4">
             <div class="flex justify-between text-sm mb-2">
-              <span class="text-gray-500 font-medium">Overall Progress</span>
+              <span class="text-gray-500 font-medium">پیشرفت کلی</span>
               <span class="text-brand-600 font-bold" id="progressPct">0%</span>
             </div>
             <div class="w-full bg-white/60 rounded-full h-2.5 overflow-hidden">
               <div class="progress-bar-fill bg-gradient-to-r from-brand-500 to-purple-500 h-full rounded-full" id="progressBar" style="width:0%"></div>
             </div>
-            <p class="text-xs text-gray-400 mt-2 font-medium" id="progressLabel">0 of 0 tasks done</p>
+            <p class="text-xs text-gray-400 mt-2 font-medium" id="progressLabel">0 از 0 کار انجام شده</p>
           </div>
         </div>
       </aside>
@@ -372,11 +372,11 @@
         <!-- Mobile search -->
         <div class="sm:hidden mb-4">
           <div class="relative">
-            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>
-            <input type="text" id="searchInputMobile" placeholder="Search tasks..."
-              class="w-full pl-10 pr-4 py-2.5 bg-gray-100 border border-transparent rounded-xl text-sm focus-brand transition-all placeholder:text-gray-400">
+            <input type="text" id="searchInputMobile" placeholder="جستجو کارها..."
+              class="w-full pr-10 pl-4 py-2.5 bg-gray-100 border border-transparent rounded-xl text-sm focus-brand transition-all placeholder:text-gray-400">
           </div>
         </div>
 
@@ -387,8 +387,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-300 mb-2">Select a Category</h3>
-          <p class="text-gray-400 text-sm max-w-xs leading-relaxed">Pick a category from the sidebar or create a new one to start managing your tasks.</p>
+          <h3 class="text-xl font-bold text-gray-300 mb-2">یک دسته‌بندی انتخاب کنید</h3>
+          <p class="text-gray-400 text-sm max-w-xs leading-relaxed">کارهای این دسته‌بندی را مدیریت کنید یا کاتبندی نو ایجاد کنید.</p>
         </div>
 
         <!-- Task panel -->
@@ -396,23 +396,23 @@
           <!-- Header row -->
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 anim-fadeInUp">
             <div>
-              <h2 class="text-2xl font-extrabold tracking-tight" id="panelCategoryName">Category</h2>
-              <p class="text-sm text-gray-400 mt-0.5 font-medium" id="panelTaskCount">0 tasks</p>
+              <h2 class="text-2xl font-extrabold tracking-tight" id="panelCategoryName">دسته‌بندی</h2>
+              <p class="text-sm text-gray-400 mt-0.5 font-medium" id="panelTaskCount">0 کار</p>
             </div>
             <div class="flex items-center gap-2">
               <select id="sortSelect" class="px-3 py-2 bg-gray-100 rounded-xl text-sm border-0 outline-none focus-brand cursor-pointer font-medium text-gray-600">
-                <option value="newest">Newest First</option>
-                <option value="oldest">Oldest First</option>
-                <option value="az">A → Z</option>
-                <option value="za">Z → A</option>
-                <option value="pending">Pending First</option>
-                <option value="done">Done First</option>
+                <option value="newest">جدیدترین ابتدا</option>
+                <option value="oldest">قدیمترین ابتدا</option>
+                <option value="az">الف - یا</option>
+                <option value="za">یا - الف</option>
+                <option value="pending">وارسعه ابتدا</option>
+                <option value="done">انجام شده ابتدا</option>
               </select>
               <button id="openAddTaskBtn" class="px-4 py-2 bg-brand-500 text-black rounded-xl hover:bg-brand-600 transition-all transform hover:scale-105 active:scale-95 font-semibold text-sm shadow-md shadow-brand-500/20 flex items-center gap-1.5 whitespace-nowrap">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
                 </svg>
-                Add Task
+                افزودن کار
               </button>
             </div>
           </div>
@@ -429,8 +429,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
               </svg>
             </div>
-            <h4 class="font-bold text-gray-400 mb-1 text-lg">No tasks here</h4>
-            <p class="text-sm text-gray-400">Click "Add Task" to create your first task!</p>
+            <h4 class="font-bold text-gray-400 mb-1 text-lg">کاری اینجا وجود ندارد</h4>
+            <p class="text-sm text-gray-400">برای افزودن اولین کاربر "افزودن کار" را کلیک کنید!</p>
           </div>
         </div>
       </main>
@@ -442,7 +442,7 @@
     <div class="modal-overlay absolute inset-0" id="addCatModalOverlay"></div>
     <div class="modal-card relative bg-white rounded-2xl shadow-2xl p-6 w-full max-w-sm anim-scaleIn">
       <div class="flex items-center justify-between mb-5">
-        <h3 class="text-lg font-bold text-gray-800">New Category</h3>
+        <h3 class="text-lg font-bold text-gray-800">دسته‌بندی نویمار</h3>
         <button id="closeAddCatBtn" class="p-1.5 hover:bg-gray-100 rounded-lg transition-colors text-gray-400 hover:text-gray-600">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
@@ -451,21 +451,22 @@
       </div>
       <div class="space-y-4">
         <div>
-          <label class="block text-sm font-semibold text-gray-600 mb-1.5">Category Name</label>
-          <input type="text" id="catNameInput" placeholder="e.g. Work, Personal, Fitness..."
+          <label class="block text-sm font-semibold text-gray-600 mb-1.5">نام دسته‌بندی</label>
+          <input type="text" id="catNameInput" placeholder="برای مثال: انجام همکاری, شخصی, تناسب اثی رفت
+..."
             class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus-brand transition-all"
             maxlength="40">
         </div>
         <div>
-          <label class="block text-sm font-semibold text-gray-600 mb-1.5">Icon</label>
+          <label class="block text-sm font-semibold text-gray-600 mb-1.5">ایموجی</label>
           <div id="emojiPicker" class="flex flex-wrap gap-2">
             <!-- rendered by JS -->
           </div>
         </div>
       </div>
       <div class="flex gap-3 mt-6">
-        <button id="cancelAddCatBtn" class="flex-1 px-4 py-2.5 bg-gray-100 text-gray-600 rounded-xl font-semibold text-sm hover:bg-gray-200 transition-colors">Cancel</button>
-        <button id="confirmAddCatBtn" class="flex-1 px-4 py-2.5 bg-brand-500 text-black rounded-xl font-semibold text-sm hover:bg-brand-600 transition-colors shadow-md shadow-brand-500/20">Create</button>
+        <button id="cancelAddCatBtn" class="flex-1 px-4 py-2.5 bg-gray-100 text-gray-600 rounded-xl font-semibold text-sm hover:bg-gray-200 transition-colors">انصراف</button>
+        <button id="confirmAddCatBtn" class="flex-1 px-4 py-2.5 bg-brand-500 text-black rounded-xl font-semibold text-sm hover:bg-brand-600 transition-colors shadow-md shadow-brand-500/20">ایجاد</button>
       </div>
     </div>
   </div>
@@ -475,7 +476,7 @@
     <div class="modal-overlay absolute inset-0" id="addTaskModalOverlay"></div>
     <div class="modal-card relative bg-white rounded-2xl shadow-2xl p-6 w-full max-w-md anim-scaleIn">
       <div class="flex items-center justify-between mb-5">
-        <h3 class="text-lg font-bold text-gray-800">New Task</h3>
+        <h3 class="text-lg font-bold text-gray-800">کار جدید</h3>
         <button id="closeAddTaskBtn" class="p-1.5 hover:bg-gray-100 rounded-lg transition-colors text-gray-400 hover:text-gray-600">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
@@ -484,21 +485,21 @@
       </div>
       <div class="space-y-4">
         <div>
-          <label class="block text-sm font-semibold text-gray-600 mb-1.5">Task Title <span class="text-red-400">*</span></label>
-          <input type="text" id="taskTitleInput" placeholder="What needs to be done?"
+          <label class="block text-sm font-semibold text-gray-600 mb-1.5">عنوان کار <span class="text-red-400">*</span></label>
+          <input type="text" id="taskTitleInput" placeholder="چه کاری باید انجام دهید؟"
             class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus-brand transition-all"
             maxlength="120">
         </div>
         <div>
-          <label class="block text-sm font-semibold text-gray-600 mb-1.5">Description <span class="text-gray-400 font-normal">(optional)</span></label>
-          <textarea id="taskDescInput" rows="3" placeholder="Add more details..."
+          <label class="block text-sm font-semibold text-gray-600 mb-1.5">توضیح <span class="text-gray-400 font-normal">(الخیاری)</span></label>
+          <textarea id="taskDescInput" rows="3" placeholder="اطلاعات بیشتر اضافه کنید..."
             class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus-brand transition-all resize-none"
             maxlength="300"></textarea>
         </div>
       </div>
       <div class="flex gap-3 mt-6">
-        <button id="cancelAddTaskBtn" class="flex-1 px-4 py-2.5 bg-gray-100 text-gray-600 rounded-xl font-semibold text-sm hover:bg-gray-200 transition-colors">Cancel</button>
-        <button id="confirmAddTaskBtn" class="flex-1 px-4 py-2.5 bg-brand-500 text-black rounded-xl font-semibold text-sm hover:bg-brand-600 transition-colors shadow-md shadow-brand-500/20">Add Task</button>
+        <button id="cancelAddTaskBtn" class="flex-1 px-4 py-2.5 bg-gray-100 text-gray-600 rounded-xl font-semibold text-sm hover:bg-gray-200 transition-colors">انصراف</button>
+        <button id="confirmAddTaskBtn" class="flex-1 px-4 py-2.5 bg-brand-500 text-black rounded-xl font-semibold text-sm hover:bg-brand-600 transition-colors shadow-md shadow-brand-500/20">افزودن کار</button>
       </div>
     </div>
   </div>
@@ -508,7 +509,7 @@
     <div class="modal-overlay absolute inset-0" id="editTaskModalOverlay"></div>
     <div class="modal-card relative bg-white rounded-2xl shadow-2xl p-6 w-full max-w-md anim-scaleIn">
       <div class="flex items-center justify-between mb-5">
-        <h3 class="text-lg font-bold text-gray-800">Edit Task</h3>
+        <h3 class="text-lg font-bold text-gray-800">ویرایش کار</h3>
         <button id="closeEditTaskBtn" class="p-1.5 hover:bg-gray-100 rounded-lg transition-colors text-gray-400 hover:text-gray-600">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
@@ -517,17 +518,17 @@
       </div>
       <div class="space-y-4">
         <div>
-          <label class="block text-sm font-semibold text-gray-600 mb-1.5">Title</label>
+          <label class="block text-sm font-semibold text-gray-600 mb-1.5">عنوان</label>
           <input type="text" id="editTitleInput" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus-brand transition-all" maxlength="120">
         </div>
         <div>
-          <label class="block text-sm font-semibold text-gray-600 mb-1.5">Description</label>
+          <label class="block text-sm font-semibold text-gray-600 mb-1.5">توضیح</label>
           <textarea id="editDescInput" rows="3" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus-brand transition-all resize-none" maxlength="300"></textarea>
         </div>
       </div>
       <div class="flex gap-3 mt-6">
-        <button id="cancelEditTaskBtn" class="flex-1 px-4 py-2.5 bg-gray-100 text-gray-600 rounded-xl font-semibold text-sm hover:bg-gray-200 transition-colors">Cancel</button>
-        <button id="confirmEditTaskBtn" class="flex-1 px-4 py-2.5 bg-brand-500 text-black rounded-xl font-semibold text-sm hover:bg-brand-600 transition-colors shadow-md shadow-brand-500/20">Save</button>
+        <button id="cancelEditTaskBtn" class="flex-1 px-4 py-2.5 bg-gray-100 text-gray-600 rounded-xl font-semibold text-sm hover:bg-gray-200 transition-colors">انصراف</button>
+        <button id="confirmEditTaskBtn" class="flex-1 px-4 py-2.5 bg-brand-500 text-black rounded-xl font-semibold text-sm hover:bg-brand-600 transition-colors shadow-md shadow-brand-500/20">ذخیره</button>
       </div>
     </div>
   </div>
@@ -542,11 +543,11 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/>
           </svg>
         </div>
-        <h3 class="text-lg font-bold text-gray-800 mb-2" id="confirmTitle">Are you sure?</h3>
-        <p class="text-sm text-gray-500 mb-6 leading-relaxed" id="confirmMessage">This action cannot be undone.</p>
+        <h3 class="text-lg font-bold text-gray-800 mb-2" id="confirmTitle">مطمئن هستید؟</h3>
+        <p class="text-sm text-gray-500 mb-6 leading-relaxed" id="confirmMessage">این عمل قابل برگشت نیست.</p>
         <div class="flex gap-3">
-          <button id="confirmCancelBtn" class="flex-1 px-4 py-2.5 bg-gray-100 text-gray-600 rounded-xl font-semibold text-sm hover:bg-gray-200 transition-colors">Cancel</button>
-          <button id="confirmOkBtn" class="flex-1 px-4 py-2.5 bg-red-500 text-white rounded-xl font-semibold text-sm hover:bg-red-600 transition-colors">Delete</button>
+          <button id="confirmCancelBtn" class="flex-1 px-4 py-2.5 bg-gray-100 text-gray-600 rounded-xl font-semibold text-sm hover:bg-gray-200 transition-colors">انصراف</button>
+          <button id="confirmOkBtn" class="flex-1 px-4 py-2.5 bg-red-500 text-white rounded-xl font-semibold text-sm hover:bg-red-600 transition-colors">حذف</button>
         </div>
       </div>
     </div>
@@ -610,11 +611,11 @@
       const m = Math.floor(d / 60000);
       const h = Math.floor(d / 3600000);
       const dy = Math.floor(d / 86400000);
-      if (m < 1) return 'Just now';
-      if (m < 60) return m + 'm ago';
-      if (h < 24) return h + 'h ago';
-      if (dy < 30) return dy + 'd ago';
-      return new Date(ts).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      if (m < 1) return 'لحظه گذشته';
+      if (m < 60) return m + ' دقیقه پیش';
+      if (h < 24) return h + ' ساعت پیش';
+      if (dy < 30) return dy + ' روز پیش';
+      return new Date(ts).toLocaleDateString('fa-IR', { month: 'short', day: 'numeric', year: 'numeric' });
     }
 
     let toastTimer = null;
@@ -712,16 +713,16 @@
       if (user) {
         $('authUsername').value = user.username;
         $('authPassword').value = '';
-        $('authHeading').textContent = 'Welcome Back';
-        $('authSubheading').textContent = 'Enter your password to continue';
-        $('authSubmitBtn').textContent = 'Sign In';
-        showAuthInfo('Account found. Enter your password to log in.');
+        $('authHeading').textContent = 'خوش ، دوباره برگشته‌اید';
+        $('authSubheading').textContent = 'رمز عبور خود را برای ادامه وارد کنید';
+        $('authSubmitBtn').textContent = 'ورود';
+        showAuthInfo('حساب جوراه دیده شد. برای تایید ورودتان رمز عبور وارد کنید.')
       } else {
         $('authUsername').value = '';
         $('authPassword').value = '';
-        $('authHeading').textContent = 'Get Started';
-        $('authSubheading').textContent = 'Create an account to begin';
-        $('authSubmitBtn').textContent = 'Create Account';
+        $('authHeading').textContent = 'شروع به كار';
+        $('authSubheading').textContent = 'برای تر ٥٤٧٧لوهی بابم جنببه کرهوابر سازی الهام';
+        $('authSubmitBtn').textContent = 'سازي';
         hideAuthInfo();
       }
       hideAuthError();
@@ -748,8 +749,8 @@
       const username = $('authUsername').value.trim();
       const password = $('authPassword').value;
 
-      if (username.length < 3) { showAuthError('Username must be at least 3 characters.'); return; }
-      if (password.length < 4) { showAuthError('Password must be at least 4 characters.'); return; }
+      if (username.length < 3) { showAuthError('نام کاربری حداقل 3 كاراکتر باشد.'); return; }
+      if (password.length < 4) { showAuthError('رمز عبور حداقل 4 كاراکتر باشد.'); return; }
 
       const stored = getUser();
       const hashed = hashPwd(password);
@@ -760,22 +761,22 @@
           hideAuthError();
           enterApp(username);
         } else {
-          showAuthError('Invalid username or password. Try again.');
+          showAuthError('نام کاربری ا رمز عبور اشتباه است. دوباره امتحان کنید.');
         }
       } else {
         // Register
         setUser({ username, password: hashed });
         // Create default categories
         const defaults = [
-          { id: uid(), name: 'Personal', emoji: '🏠', createdAt: Date.now() },
-          { id: uid(), name: 'Work',     emoji: '💼', createdAt: Date.now() },
-          { id: uid(), name: 'Shopping', emoji: '🛒', createdAt: Date.now() },
+          { id: uid(), name: 'شخصی', emoji: '💺', createdAt: Date.now() },
+          { id: uid(), name: 'کار', emoji: '📋', createdAt: Date.now() },
+          { id: uid(), name: 'خريد', emoji: '🛒', createdAt: Date.now() },
         ];
         setCategories(defaults);
         setTasks([]);
         hideAuthError();
         enterApp(username);
-        toast('Account created! Welcome to TaskFlow.');
+        toast('حساب ب توٓفلی سااخت شد. به تسک‌فلو خوش آمدید.');
       }
     }
 
@@ -798,15 +799,15 @@
     function logout() {
       activeCategoryId = null;
       showAuth();
-      toast('Logged out');
+      toast('خروج از حساب');
     }
 
     // ========== CLEAR ALL ==========
     function clearAll() {
       openConfirm(
-        'Clear All Data',
-        'This will permanently erase all categories, tasks, and your account. This cannot be undone.',
-        'Clear Everything',
+        'حذف تمام داده‌ها',
+        'این اقدام تمام دسته‌بندی‌ها، کارها و حساب شما را دائما حذف خواهد کرد و این عمل قابل برگشت نیست.',
+        'همه‌چیز را کار ببرید',
         () => {
           localStorage.removeItem(KEYS.user);
           localStorage.removeItem(KEYS.categories);
@@ -818,7 +819,7 @@
           document.body.classList.add('bg-gray-50', 'text-gray-900');
           applyTheme('light');
           showAuth();
-          toast('All data cleared');
+          toast('تمام داده‌ها حذف شد');
         }
       );
     }
@@ -867,8 +868,8 @@
 
       if (cats.length === 0) {
         container.innerHTML = `<div class="text-center py-10 text-sm ${isDark ? 'text-slate-500' : 'text-gray-400'}">
-          <p class="font-medium">No categories yet</p>
-          <p class="mt-1 text-xs">Click + above to create one</p>
+          <p class="font-medium">هنوز دسته‌بندی‌ای ایجاد نشده</p>
+          <p class="mt-1 text-xs">برای ایجاد یکی بر + بالا کلیک کنید</p>
         </div>`;
         return;
       }
@@ -938,9 +939,9 @@
       if (!cat) return;
 
       openConfirm(
-        'Delete Category',
-        `Delete "${cat.name}" and all its tasks? This cannot be undone.`,
-        'Delete',
+        'حذف دسته‌بندی',
+        `"${cat.name}" را و تمام کارهای آن ذاکره کنم؟"`,
+        'حذف',
         () => {
           setCategories(cats.filter(c => c.id !== id));
           // Also delete all tasks in this category
@@ -952,7 +953,7 @@
           renderCategories();
           renderTasks();
           updateProgress();
-          toast(`"${cat.name}" deleted`);
+          toast(`"${cat.name}" حذف شد`);
         }
       );
     }
@@ -995,7 +996,7 @@
       closeAddCatModal();
       renderCategories();
       selectCategory(cats[cats.length - 1].id);
-      toast(`"${name}" created`);
+      toast(`"${name}" ایجاد شد`);
     }
 
     // ========== TASKS ==========
@@ -1042,7 +1043,7 @@
         $('panelCategoryName').textContent = '📋 All Tasks';
         const total = allTasks.length;
         const done = allTasks.filter(t => t.status === 'done').length;
-        $('panelTaskCount').textContent = `${total} task${total !== 1 ? 's' : ''} · ${done} completed`;
+        $('panelTaskCount').textContent = `${total} کار ${done} انجام شده`;
       } else {
         const cats = getCategories();
         const cat = cats.find(c => c.id === activeCategoryId);
@@ -1051,7 +1052,7 @@
         $('panelCategoryName').textContent = cat.emoji + ' ' + cat.name;
         const total = catTasks.length;
         const done = catTasks.filter(t => t.status === 'done').length;
-        $('panelTaskCount').textContent = `${total} task${total !== 1 ? 's' : ''} · ${done} completed`;
+        $('panelTaskCount').textContent = `${total} کار ${done} انجام شده`;
       }
 
       const tasks = getFilteredSortedTasks();
@@ -1070,8 +1071,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
               </svg>
             </div>
-            <h4 class="font-bold ${isDark ? 'text-slate-400' : 'text-gray-400'} mb-1 text-lg">No matches</h4>
-            <p class="text-sm ${isDark ? 'text-slate-500' : 'text-gray-400'}">Try a different search term</p>
+            <h4 class="font-bold ${isDark ? 'text-slate-400' : 'text-gray-400'} mb-1 text-lg">هیچ مطابقتی نیست</h4>
+            <p class="text-sm ${isDark ? 'text-slate-500' : 'text-gray-400'}">عبارت جستجو خود را برای دوباره سعی کنید</p>
           </div>`;
         } else {
           emptyEl.innerHTML = `<div class="py-16 text-center select-none">
@@ -1080,8 +1081,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
               </svg>
             </div>
-            <h4 class="font-bold ${isDark ? 'text-slate-400' : 'text-gray-400'} mb-1 text-lg">No tasks here</h4>
-            <p class="text-sm ${isDark ? 'text-slate-500' : 'text-gray-400'}">Click "Add Task" to create your first task!</p>
+            <h4 class="font-bold ${isDark ? 'text-slate-400' : 'text-gray-400'} mb-1 text-lg">کاری اینجا وجود ندارد</h4>
+            <p class="text-sm ${isDark ? 'text-slate-500' : 'text-gray-400'}">برای افزودن اولین کار "افزودن کار" را کلیک کنید!</p>
           </div>`;
         }
         return;
@@ -1111,7 +1112,7 @@
               ${task.description ? `<p class="task-desc-text text-xs ${descText} mt-1.5 leading-relaxed">${esc(task.description)}</p>` : ''}
               <div class="flex items-center gap-3 mt-2">
                 <p class="text-xs ${mutedText} font-medium">${timeAgo(task.createdAt)}</p>
-                <span class="inline-flex items-center text-xs font-semibold px-2 py-0.5 rounded-full ${isDone ? 'bg-green-100 text-green-700' : (isDark ? 'bg-amber-900/40 text-amber-400' : 'bg-amber-50 text-amber-600')}">${isDone ? 'Done' : 'Pending'}</span>
+                <span class="inline-flex items-center text-xs font-semibold px-2 py-0.5 rounded-full ${isDone ? 'bg-green-100 text-green-700' : (isDark ? 'bg-amber-900/40 text-amber-400' : 'bg-amber-50 text-amber-600')}">${isDone ? 'انجام شده' : 'وارسعه'}</span>
               </div>
             </div>
             <div class="flex items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">
@@ -1158,15 +1159,15 @@
       const t = tasks.find(x => x.id === id);
       if (!t) return;
       openConfirm(
-        'Delete Task',
-        `Delete "${t.title}"? This cannot be undone.`,
-        'Delete',
+        'حذف کار',
+        `"${t.title}" را حذف کنم؟ این عمل قابل برگشت نیست.`,
+        'حذف',
         () => {
           setTasks(tasks.filter(x => x.id !== id));
           renderTasks();
           renderCategories();
           updateProgress();
-          toast('Task deleted');
+          toast('کار حذف شد');
         }
       );
     }
@@ -1177,7 +1178,7 @@
         // If "All Tasks" is shown, user needs to pick a category... just use first one or prompt
         const cats = getCategories();
         if (cats.length === 0) {
-          toast('Create a category first!');
+          toast('ابتدا یک دسته‌بندی ایجاد کنید!');
           return;
         }
       }
@@ -1198,7 +1199,7 @@
       if (catId === null) {
         // Pick first category
         const cats = getCategories();
-        if (cats.length === 0) { toast('Create a category first!'); return; }
+        if (cats.length === 0) { toast('ابتدا یک دسته‌بندی ایجاد کنید!'); return; }
         catId = cats[0].id;
       }
 
@@ -1216,7 +1217,7 @@
       renderTasks();
       renderCategories();
       updateProgress();
-      toast('Task added');
+      toast('کار افزوده شد');
     }
 
     // ========== EDIT TASK MODAL ==========
@@ -1247,7 +1248,7 @@
       setTasks(tasks);
       closeEditTaskModal();
       renderTasks();
-      toast('Task updated');
+      toast('کار به‌روز‌رسانی شد');
     }
 
     // ========== CONFIRM MODAL ==========
@@ -1277,7 +1278,7 @@
       const pct = total > 0 ? Math.round((done / total) * 100) : 0;
       $('progressPct').textContent = pct + '%';
       $('progressBar').style.width = pct + '%';
-      $('progressLabel').textContent = `${done} of ${total} tasks done`;
+      $('progressLabel').textContent = `${done} از ${total} کار انجام شده`;
     }
 
     // ========== MODAL THEME HELPER ==========
