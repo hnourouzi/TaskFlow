@@ -230,7 +230,7 @@
       $("authEmail").required = false;
       $("authPassword").required = true;
       $("authToggleText").textContent =
-        "حساب جدید نمی‌خواهید؟ برای ثبت‌نام اینجا کلیک کنید.";
+        "";
 
       signInBtn.className =
         "flex-1 px-4 py-2 bg-white text-gray-800 font-semibold rounded-lg transition-all shadow-sm";
