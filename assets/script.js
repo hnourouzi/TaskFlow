@@ -459,7 +459,7 @@
           <span class="text-lg flex-shrink-0">${cat.emoji}</span>
           <div class="flex-1 min-w-0">
             <p class="font-medium text-sm truncate">${esc(cat.name)}</p>
-            <p class="text-xs ${isDark ? "text-slate-500" : "text-gray-400"}">${doneCount}/${total} done</p>
+            <p class="text-xs ${isDark ? "text-slate-500" : "text-gray-400"}">${doneCount}/${total} انجام شده</p>
           </div>
           <button class="cat-delete-btn opacity-0 group-hover:opacity-100 p-1 hover:bg-red-100 hover:text-red-500 rounded-lg transition-all flex-shrink-0" title="Delete" data-catid="${cat.id}">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -508,7 +508,7 @@
 
     openConfirm(
       "حذف دسته‌بندی",
-      `"${cat.name}" را و تمام کارهای آن ذاکره کنم؟"`,
+      `"${cat.name}" را و تمام کارهای آن حذف کنم؟"`,
       "حذف",
       () => {
         setCategories(cats.filter((c) => c.id !== id));
@@ -636,7 +636,7 @@
 
     // Header
     if (activeCategoryId === null) {
-      $("panelCategoryName").textContent = "📋 All Tasks";
+      $("panelCategoryName").textContent = "📋 تمام کارها";
       const total = allTasks.length;
       const done = allTasks.filter((t) => t.status === "done").length;
       $("panelTaskCount").textContent = `${total} کار ${done} انجام شده`;
