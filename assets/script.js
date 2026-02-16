@@ -721,7 +721,7 @@
               ${task.description ? `<p class="task-desc-text text-xs ${descText} mt-1.5 leading-relaxed">${esc(task.description)}</p>` : ""}
               <div class="flex items-center gap-3 mt-2">
                 <p class="text-xs ${mutedText} font-medium">${timeAgo(task.createdAt)}</p>
-                <span class="inline-flex items-center text-xs font-semibold px-2 py-0.5 rounded-full ${isDone ? "bg-green-100 text-green-700" : isDark ? "bg-amber-900/40 text-amber-400" : "bg-amber-50 text-amber-600"}">${isDone ? "انجام شده" : "وارسعه"}</span>
+                <span class="inline-flex items-center text-xs font-semibold px-2 py-0.5 rounded-full ${isDone ? "bg-green-100 text-green-700" : isDark ? "bg-amber-900/40 text-amber-400" : "bg-amber-50 text-amber-600"}">${isDone ? "انجام شده" : "در حال انجام"}</span>
               </div>
             </div>
             <div class="flex items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">
